@@ -38,10 +38,9 @@ char *ft_get_line(char *save)
         return NULL;
     while (save[i] != '\n' && save[i])
         i++;
-    // if (save[i + 1] == '\n')
+    
     s = (char *)malloc(sizeof(char) * i + 2);
-    // if (save[i + 1] == '\0')
-    //     s = (char *)malloc(sizeof(char) * i + 1);
+    
     if (!s)
         return NULL;
     i = 0;
@@ -110,12 +109,9 @@ char *get_next_line(int fd)
     free(buff);
     buff = NULL;
 
-    // line = ft_get_line(line_save);
     if (!line)
         return NULL;
-    // if (line[0] == '\n')
-    //     return NULL;
-
+    
     line_save = ft_save_line(line);
 
     return line;
